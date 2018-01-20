@@ -2,11 +2,105 @@
 <!--TODO: for fanciness, Add fancy fonts, change background color to purple and fonts to white, add graphics if possible-->
 <link rel="stylesheet" type="text/css" href="resources/css/basecount.css">
 <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+<!--<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>-->
 
 <head>
     <title>Base Counter</title>
+
+    <script>
+        
+
+        /*function convert(){
+            var userInput = document.getElementById("input").value;
+            var result = userInput.replace(/T/g, "U");
+            var display = document.getElementById("display");
+            display.innerHTML = result;
+        }*/
+
+        function countNuc(){
+            var input = document.getElementById("input").value;
+            var length = input.length;
+            var nucCount = [0, 0, 0, 0];
+
+            for(i = 0; i < length; i++){
+                if (input[i] == 'A'){ //tracks number of A bases
+                    nucCount[0]++;
+                }
+                if (input[i] == 'C'){ //tracks number of C bases
+                    nucCount[1]++;
+                }
+                if (input[i] == 'G'){ //tracks number of G bases
+                    nucCount[2]++;
+                }
+                if (input[i] == 'T'){ //tracks number of T bases
+                    nucCount[3]++;
+                }
+            }
+            var display = document.getElementById("display");
+            var displayA = document.getElementById("display-a");
+            var displayC = document.getElementById("display-c");
+            var displayG = document.getElementById("display-g");
+            var displayT = document.getElementById("display-t");
+
+            display.innerHTML = input;
+            displayA.innerHTML = String(nucCount[0]);
+            displayC.innerHTML = String(nucCount[1]);
+            displayG.innerHTML = String(nucCount[2]);
+            displayT.innerHTML = String(nucCount[3]);
+        }
+        /*
+        function countA(input){
+            var length = str.length;
+            a = 0;
+
+            for(i = 0; i < length; i++){
+                if (str[0] == 'A'){ //tracks number of A bases
+                    a++;
+                }
+            }
+            var display = document.getElementById("display-a");
+            display.innerHTML = a;
+        }
+
+        function countC(input){
+            var length = str.length;
+            c = 0;
+
+            for(i = 0; i < length; i++){
+                if (str[0] == 'C'){ //tracks number of C bases
+                    c++;
+                }
+            }
+            var display = document.getElementById("display-c");
+            display.innerHTML = c;
+        }
+
+        function countG(input){
+            var length = str.length;
+            g = 0;
+
+            for(i = 0; i < length; i++){
+                if (str[0] == 'G'){ //tracks number of G bases
+                    g++;
+                }
+            }
+            var display = document.getElementById("display-g");
+            display.innerHTML = g;
+        }
+
+        function countT(input){
+            var length = str.length;
+            t = 0;
+
+            for(i = 0; i < length; i++){
+                if (str[0] == 'T'){ //tracks number of T bases
+                    t++;
+                }
+            }
+            var display = document.getElementById("display-t");
+            display.innerHTML = t;
+        }*/
+    </script>
 </head>
     
 <body>
@@ -24,8 +118,23 @@
 
     <div id="row-1" style="text-align:center">
         <form>
-            DNA String: <input type="text" placeholder="Input string here" required>
-            <button type="submit">Submit!</button>
+            DNA String: <input type="text" id="input" placeholder="Input string here"/>
+            <input type="button" value="Submit!" onclick="countNuc()"/>
         </form>
     </div>
+
+    <br><br>
+
+    <Legend class="text-center">DNA Nucleotide Count:</Legend>
+    <div class="row">
+        <p class="text-center">test: </p><Legend class="text-center" id="display"></Legend>
+        <Legend class="text-center" id="display-a"></Legend>
+        <Legend class="text-center" id="display-c"></Legend>
+        <Legend class="text-center" id="display-g"></Legend>
+        <Legend class="text-center" id="display-t"></Legend>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
