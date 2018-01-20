@@ -6,6 +6,20 @@
 
 <head>
     <title>DNA Complementer</title>
+    <script>
+        function convert(){
+            var userInput = document.getElementById("input").value;
+            var temp = userInput.replace(/A/g, "t").replace(/C/g, "g").replace(/G/g, "c").replace(/T/g, "a");
+            var result = "";
+            for(var i=temp.length-1; i>=0; i--){
+                result +=temp[i];
+            }
+            result = result.replace(/a/g, "A").replace(/t/g, "T").replace(/g/g, "G").replace(/c/g, "C");
+            var display = document.getElementById("display");
+            display.innerHTML = result;
+        }
+
+    </script>
 
 </head>
     
@@ -23,8 +37,12 @@
 
     <div id="row-1" style="text-align:center">
         <form>
-            DNA String: <input type="text" placeholder="Input string here" required>
-            <button type="submit">Submit!</button>
+            DNA String: <input type="text" id="input" placeholder="Input string here" />
+            <input type="button" value="Submit!" onclick="convert()"/>
+            <br>
         </form>
+        <br><br>
+        <Legend>RNA String:</Legend>
+        <Legend id="display"></Legend>
     </div>
 </body>
