@@ -2,6 +2,7 @@
 <!--TODO: for fanciness, Add fancy fonts, change background color to purple and fonts to white, add graphics if possible-->
 <link rel="stylesheet" type="text/css" href="resources/css/basecount.css">
 <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 
 <head>
@@ -9,25 +10,18 @@
 </head>
     
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">WebSiteName</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
-        </div>
-    </nav>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+    </ul>
 
     <div class="titles">
-        <p id="main-title" class="text-center boy">DNA Base Counter</p>
+        <p id="main-title" class="text-center">DNA Base Counter</p>
         <p id="sub-title" class="text-center">Counts the number of specific nucleotides (ACGT) in a DNA string.</p>
     </div>
-    <div id="row-1" class="row text-center">
+    <div id="row-1" text-align="right">
         <form>
             DNA String: <input type="text" placeholder="Input string here" required>
             <button type="submit">Submit!</button>
