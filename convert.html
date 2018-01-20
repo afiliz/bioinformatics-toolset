@@ -6,23 +6,38 @@
 
 <head>
     <title>DNA to RNA</title>
+    <script>
+        function convert(){
+            var userInput = document.getElementById("input").value;
+            var result = userInput.replace(/T/g, "U");
+            var display = document.getElementById("display");
+            display.innerHTML = result;
+        }
+    </script>
 </head>
 
 <body>
     <ul>
             <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li><a href="basecount.html">Base Counter</a></li>
+            <li><a href="convert.html">DNA -> RNA</a></li>
+            <li><a href="complement.html">Complementing DNA</a></li>
         </ul>
     <div class="titles">
         <p id="main-title" class="text-center boy">DNA to RNA Converter</p>
         <p id="sub-title" class="text-center">Converts a DNA string into an RNA string.</p>
     </div>
-    <div id="row-1" class="row text-center">
+    <div id="row-1" style="text-align:center">
         <form>
-            DNA String: <input type="text" placeholder="Input string here" required>
-            <button type="submit">Submit!</button>
+            DNA String: <input type="text" id="input" placeholder="Input string here" />
+            <input type="button" value="Submit!" onclick="convert()"/>
+            <br>
         </form>
+
+        <br><br>
+        <Legend>RNA String:</Legend>
+        <Legend id="display"></Legend>
+
+
     </div>
 </body>

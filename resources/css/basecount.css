@@ -2,6 +2,11 @@ p {
     color: #363731;
 }
 
+form {
+    display: inline-block;
+    text-align: center;
+}
+
 .titles{
     padding-top: 5%;
 }
