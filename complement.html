@@ -2,6 +2,7 @@
 <!--TODO: for fanciness, Add fancy fonts, change background color to purple and fonts to white, add graphics if possible-->
 <link rel="stylesheet" type="text/css" href="resources/css/basecount.css">
 <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 
 <head>
@@ -19,17 +20,19 @@
             display.innerHTML = result;
         }
 
+
+
     </script>
 
 </head>
-    
+
 <body>
     <ul>
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="basecount.html">Base Counter</a></li>
-            <li><a href="convert.html">DNA -> RNA</a></li>
-            <li><a href="complement.html">Complementing DNA</a></li>
-        </ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="basecount.html">Base Counter</a></li>
+        <li><a href="convert.html">DNA -> RNA</a></li>
+        <li><a href="complement.html">Complementing DNA</a></li>
+    </ul>
     <div class="titles">
         <p id="main-title" class="text-center boy">Complement a DNA Strand</p>
         <p id="sub-title" class="text-center">Finds the <a target="_blank" href="http://bioweb.uwlax.edu/GenWeb/Molecular/Seq_Anal/Reverse_Comp/reverse_comp.html">reverse complement</a>.</p>
@@ -42,7 +45,14 @@
             <br>
         </form>
         <br><br>
-        <Legend>RNA String:</Legend>
-        <Legend id="display"></Legend>
+
+        
+
     </div>
+    <div class="jumbotron text-center" style="word-wrap:break-word;">
+        <Legend>RNA String:</Legend>
+        <p id="display"></p>
+    </div>
+
+
 </body>
