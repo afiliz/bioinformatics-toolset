@@ -65,3 +65,41 @@ li a.active {
 .form-inline {
     margin-left: 34%;
 }
+
+
+footer{
+    background-color: rgb(32, 32, 32);
+    height: 20%;
+    padding-top: 2.8%;
+}
+
+#footer-content{
+    color: white;
+    padding-bottom: 3%;
+}
+
+#footer-content-p{
+    color: white !important;
+    padding-top: 2%;
+    padding-left: 6%;
+}
+
+#footer-h3{
+    padding-left: 6%;
+    padding-top: 2%;
+}
+
+#sub-footer-content{
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+#footer-content-p-2 {
+    color: white !important;
+    padding-top: 2%;
+    padding-left: 6%;
+}
+
+.jumbotron {
+    margin-top: 8%;
+}

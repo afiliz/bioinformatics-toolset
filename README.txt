@@ -4,4 +4,4 @@ The ultimate goal of this project is to make this web application THE place to c
 
 This project was coded by Adam Filiz and Vincent Wu from January 20th to the 21st, 2018 in a 36-hour hackathon known as CruzHacks.
 
-View our live demo at https://bioinformatics-toolset.herokuapp.com
+View our live demo at https://bioinformatics-toolset.herokuapp.com.
