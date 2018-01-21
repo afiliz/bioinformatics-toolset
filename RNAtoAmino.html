@@ -5,13 +5,293 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 
+<head>
+	<title>RNA to Amino Acids</title>
+	<script>
+		function convert(){
+			var input = document.getElementById("input").value;
+			var aaCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-<ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="basecount.html">Base Counter</a></li>
-        <li><a href="convert.html">DNA -> RNA</a></li>
-        <li><a href="complement.html">Complementing DNA</a></li>
-        <li><a href="RNAtoAmino.html">RNA -> Amino Acids</a></li>
-    </ul>
+			
+			for(i=0; i < (input.length * 3); i=i+3){
+		if((input[i] == 'U') && (input[i+1] == 'U') && (input[i+2] == 'U')){	//F
+			aaCount[0]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'U') && (input[i+2] == 'C')){
+			aaCount[0]++;
+		}
 
-    </html>
+		else if((input[i] == 'U') && (input[i+1] == 'U') && (input[i+2] == 'A')){	//L
+			aaCount[1]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'U') && (input[i+2] == 'G')){
+			aaCount[1]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'U') && (input[i+2] == 'U')){
+			aaCount[1]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'U') && (input[i+2] == 'C')){
+			aaCount[1]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'U') && (input[i+2] == 'A')){
+			aaCount[1]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'U') && (input[i+2] == 'G')){
+			aaCount[1]++;
+		}
+
+		else if((input[i] == 'A') && (input[i+1] == 'U') && (input[i+2] == 'U')){	//I
+			aaCount[2]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'U') && (input[i+2] == 'C')){
+			aaCount[2]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'U') && (input[i+2] == 'A')){
+			aaCount[2]++;
+		}
+		
+		else if((input[i] == 'A') && (input[i+1] == 'U') && (input[i+2] == 'G')){	//M
+			aaCount[3]++;
+		}
+
+		else if((input[i] == 'G') && (input[i+1] == 'U') && (input[i+2] == 'U')){	//V
+			aaCount[4]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'U') && (input[i+2] == 'C')){
+			aaCount[4]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'U') && (input[i+2] == 'A')){
+			aaCount[4]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'U') && (input[i+2] == 'G')){
+			aaCount[4]++;
+		}
+
+		else if((input[i] == 'U') && (input[i+1] == 'C') && (input[i+2] == 'U')){	//S
+			aaCount[5]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'C') && (input[i+2] == 'C')){
+			aaCount[5]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'C') && (input[i+2] == 'A')){
+			aaCount[5]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'C') && (input[i+2] == 'G')){
+			aaCount[5]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'G') && (input[i+2] == 'U')){
+			aaCount[5]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'G') && (input[i+2] == 'C')){
+			aaCount[5]++;
+		}
+
+		else if((input[i] == 'C') && (input[i+1] == 'C') && (input[i+2] == 'U')){	//P
+			aaCount[6]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'C') && (input[i+2] == 'C')){
+			aaCount[6]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'C') && (input[i+2] == 'A')){
+			aaCount[6]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'C') && (input[i+2] == 'G')){
+			aaCount[6]++;
+		}
+
+		else if((input[i] == 'A') && (input[i+1] == 'C') && (input[i+2] == 'U')){	//T
+			aaCount[7]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'C') && (input[i+2] == 'C')){
+			aaCount[7]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'C') && (input[i+2] == 'A')){
+			aaCount[7]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'C') && (input[i+2] == 'G')){
+			aaCount[7]++;
+		}
+
+		else if((input[i] == 'G') && (input[i+1] == 'C') && (input[i+2] == 'U')){	//A
+			aaCount[8]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'C') && (input[i+2] == 'C')){
+			aaCount[8]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'C') && (input[i+2] == 'A')){
+			aaCount[8]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'C') && (input[i+2] == 'G')){
+			aaCount[8]++;
+		}
+
+		else if((input[i] == 'U') && (input[i+1] == 'A') && (input[i+2] == 'U')){	//Y
+			aaCount[9]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'A') && (input[i+2] == 'C')){
+			aaCount[9]++;
+		}
+
+		else if((input[i] == 'C') && (input[i+1] == 'A') && (input[i+2] == 'U')){	//H
+			aaCount[10]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'A') && (input[i+2] == 'C')){
+			aaCount[10]++;
+		}
+
+		else if((input[i] == 'C') && (input[i+1] == 'A') && (input[i+2] == 'A')){	//Q
+			aaCount[11]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'A') && (input[i+2] == 'G')){
+			aaCount[11]++;
+		}
+
+		else if((input[i] == 'A') && (input[i+1] == 'A') && (input[i+2] == 'U')){	//N
+			aaCount[12]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'A') && (input[i+2] == 'C')){
+			aaCount[12]++;
+		}
+
+		else if((input[i] == 'A') && (input[i+1] == 'A') && (input[i+2] == 'A')){	//K
+			aaCount[13]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'A') && (input[i+2] == 'G')){
+			aaCount[13]++;
+		}
+
+		else if((input[i] == 'G') && (input[i+1] == 'A') && (input[i+2] == 'U')){	//D
+			aaCount[14]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'A') && (input[i+2] == 'C')){
+			aaCount[14]++;
+		}
+
+		else if((input[i] == 'G') && (input[i+1] == 'A') && (input[i+2] == 'A')){	//E
+			aaCount[15]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'A') && (input[i+2] == 'G')){
+			aaCount[15]++;
+		}
+
+		else if((input[i] == 'U') && (input[i+1] == 'G') && (input[i+2] == 'U')){	//C
+			aaCount[16]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'G') && (input[i+2] == 'C')){
+			aaCount[16]++;
+		}
+		
+		else if((input[i] == 'U') && (input[i+1] == 'G') && (input[i+2] == 'G')){	//W
+			aaCount[17]++;
+		}
+
+		else if((input[i] == 'C') && (input[i+1] == 'G') && (input[i+2] == 'U')){	//R
+			aaCount[18]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'G') && (input[i+2] == 'C')){
+			aaCount[18]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'G') && (input[i+2] == 'A')){
+			aaCount[18]++;
+		}else if((input[i] == 'C') && (input[i+1] == 'G') && (input[i+2] == 'G')){
+			aaCount[18]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'G') && (input[i+2] == 'A')){
+			aaCount[18]++;
+		}else if((input[i] == 'A') && (input[i+1] == 'G') && (input[i+2] == 'G')){
+			aaCount[18]++;
+		}
+		
+		else if((input[i] == 'G') && (input[i+1] == 'G') && (input[i+2] == 'U')){	//G
+			aaCount[19]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'G') && (input[i+2] == 'C')){
+			aaCount[19]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'G') && (input[i+2] == 'A')){
+			aaCount[19]++;
+		}else if((input[i] == 'G') && (input[i+1] == 'G') && (input[i+2] == 'G')){
+			aaCount[19]++;
+		}
+
+		else if((input[i] == 'U') && (input[i+1] == 'A') && (input[i+2] == 'A')){	// stop
+			aaCount[20]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'A') && (input[i+2] == 'G')){
+			aaCount[20]++;
+		}else if((input[i] == 'U') && (input[i+1] == 'G') && (input[i+2] == 'A')){
+			aaCount[20]++;
+		}
+		
+		else{
+			aaCount[0] = aaCount[0] + 0;
+		}
+	}
+
+	var displayF = document.getElementById("display-f");
+	var displayL = document.getElementById("display-l");
+	var displayI = document.getElementById("display-i");
+	var displayM = document.getElementById("display-m");
+	var displayV = document.getElementById("display-v");
+	var displayS = document.getElementById("display-s");
+	var displayP = document.getElementById("display-p");
+	var displayT = document.getElementById("display-t");
+	var displayA = document.getElementById("display-a");
+	var displayY = document.getElementById("display-y");
+	var displayH = document.getElementById("display-h");
+	var displayQ = document.getElementById("display-q");
+	var displayN = document.getElementById("display-n");
+	var displayK = document.getElementById("display-k");
+	var displayD = document.getElementById("display-d");
+	var displayE = document.getElementById("display-e");
+	var displayC = document.getElementById("display-c");
+	var displayW = document.getElementById("display-w");
+	var displayR = document.getElementById("display-r");
+	var displayG = document.getElementById("display-g");
+	var displayStop = document.getElementById("display-stop");
+
+	displayF.innerHTML = "F: " + String(aaCount[0]);
+	displayL.innerHTML = "L: " + String(aaCount[1]);
+	displayI.innerHTML = "I: " + String(aaCount[2]);
+	displayM.innerHTML = "M: " + String(aaCount[3]);
+	displayV.innerHTML = "V: " + String(aaCount[4]);
+	displayS.innerHTML = "S: " + String(aaCount[5]);
+	displayP.innerHTML = "P: " + String(aaCount[6]);
+	displayT.innerHTML = "T: " + String(aaCount[7]);
+	displayA.innerHTML = "A: " + String(aaCount[8]);
+	displayY.innerHTML = "Y: " + String(aaCount[9]);
+	displayH.innerHTML = "H: " + String(aaCount[10]);
+	displayQ.innerHTML = "Q: " + String(aaCount[11]);
+	displayN.innerHTML = "N: " + String(aaCount[12]);
+	displayK.innerHTML = "K: " + String(aaCount[13]);
+	displayD.innerHTML = "D: " + String(aaCount[14]);
+	displayE.innerHTML = "E: " + String(aaCount[15]);
+	displayC.innerHTML = "C: " + String(aaCount[16]);
+	displayW.innerHTML = "W: " + String(aaCount[17]);
+	displayR.innerHTML = "R: " + String(aaCount[18]);
+	displayG.innerHTML = "G: " + String(aaCount[19]);
+	displayStop.innerHTML = "Stop: " + String(aaCount[20]);
+
+}
+
+</script>
+</head>
+
+
+<body>
+	<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a href="basecount.html">Base Counter</a></li>
+		<li><a href="convert.html">DNA to RNA</a></li>
+		<li><a href="complement.html">Complementing DNA</a></li>
+		<li><a href="RNAtoAmino.html">RNA to Amino Acids</a></li>
+	</ul>
+	<div class="titles">
+		<p id="main-title" class="text-center boy">RNA to Amino Acids</p>
+		<p id="sub-title" class="text-center">Counts the number of Amino Acids given a RNA sequence</p>
+	</div>
+	
+
+	<div id="row-1" style="text-align:center">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="control-label">RNA Sequence:&nbsp;</label><input type="text" id="input" placeholder="Input RNA Sequence"/>
+				<input type="button" class="btn btn-primary" value="Submit!" onclick="convert()"/>
+			</div>
+		</form>
+	</div>
+
+	<br>
+	<div class="jumbotron text-center" style="word-wrap:break-word;">
+		<Legend class="text-center">Amino Acids Count:</Legend>
+		<div class="row">
+			<Legend id="display-f"></Legend>
+			<Legend id="display-l"></Legend>
+			<Legend id="display-i"></Legend>
+			<Legend id="display-m"></Legend>
+			<Legend id="display-v"></Legend>
+			<Legend id="display-s"></Legend>
+			<Legend id="display-p"></Legend>
+			<Legend id="display-t"></Legend>
+			<Legend id="display-a"></Legend>
+			<Legend id="display-y"></Legend>
+			<Legend id="display-h"></Legend>
+			<Legend id="display-q"></Legend>
+			<Legend id="display-n"></Legend>
+			<Legend id="display-k"></Legend>
+			<Legend id="display-d"></Legend>
+			<Legend id="display-e"></Legend>
+			<Legend id="display-c"></Legend>
+			<Legend id="display-w"></Legend>
+			<Legend id="display-r"></Legend>
+			<Legend id="display-g"></Legend>
+			<Legend id="display-stop"></Legend>
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>
