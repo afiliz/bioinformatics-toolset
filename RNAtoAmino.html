@@ -11,6 +11,7 @@
 		function convert(){
 			var input = document.getElementById("input").value;
 			var aaCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
 			
 			for(i=0; i < (input.length * 3); i=i+3){
 		if((input[i] == 'U') && (input[i+1] == 'U') && (input[i+2] == 'U')){	//F
@@ -230,7 +231,7 @@
 	displayW.innerHTML = "W: " + String(aaCount[17]);
 	displayR.innerHTML = "R: " + String(aaCount[18]);
 	displayG.innerHTML = "G: " + String(aaCount[19]);
-	displayStop.innerHTML = "Stop Codons: " + String(aaCount[20]);
+	displayStop.innerHTML = "Stop: " + String(aaCount[20]);
 
 }
 
@@ -240,56 +241,57 @@
 
 <body>
 	<ul>
-		<li><a href="index.html">Home</a></li>
+		<li><a class="active" href="index.html">Home</a></li>
 		<li><a href="basecount.html">Base Counter</a></li>
 		<li><a href="convert.html">DNA to RNA</a></li>
 		<li><a href="complement.html">Complementing DNA</a></li>
-		<li><a class="active" href="RNAtoAmino.html">RNA to Amino Acids</a></li>
+		<li><a href="RNAtoAmino.html">RNA to Amino Acids</a></li>
 	</ul>
 	<div class="titles">
 		<p id="main-title" class="text-center boy">RNA to Amino Acids</p>
-		<p id="sub-title" class="text-center">Counts the number of <a href="http://www.cbs.dtu.dk/courses/27619/codon.html">Amino Acids</a> given a RNA sequence</p>
+		<p id="sub-title" class="text-center">Counts the number of Amino Acids given a RNA sequence</p>
 	</div>
 	
 
-	<div id="row-1">
-            <form class="form-inline text-center">
-                <div class="form-group">
-                    <label class="control-label">RNA Sequence: </label><input class="form-control" type="text" id="input" placeholder="Input sequence here"/>
-                    <input type="button" id="submit-button" class="btn btn-primary btn-sm" value="Submit!" onclick="convert()"/>
-                </div>
-            </form>
-    </div>
+	<div id="row-1" style="text-align:center">
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="control-label">RNA Sequence:&nbsp;</label><input type="text" id="input" placeholder="Input RNA Sequence"/>
+				<input type="button" class="btn btn-primary btn-sm" value="Submit!" onclick="convert()"/>
+			</div>
+		</form>
+	</div>
 
 	<br>
 	<div class="jumbotron text-center" style="word-wrap:break-word;">
-		<Legend class="text-center"><u>Amino Acids Count</u></Legend>
-		<div class="row-1">
-			<Legend id="display-f" class="col-xs-1"></Legend>
-			<Legend id="display-l" class="col-xs-1"></Legend>
-			<Legend id="display-i" class="col-xs-1"></Legend>
-			<Legend id="display-m" class="col-xs-1"></Legend>
-			<Legend id="display-v" class="col-xs-1"></Legend>
-			<Legend id="display-s" class="col-xs-1"></Legend>
-			<Legend id="display-p" class="col-xs-1"></Legend>
-			<Legend id="display-t" class="col-xs-1"></Legend>
-			<Legend id="display-a" class="col-xs-1"></Legend>
-			<Legend id="display-y" class="col-xs-1"></Legend>
-			<Legend id="display-h" class="col-xs-1"></Legend>
-			<Legend id="display-q" class="col-xs-1"></Legend>
-		</div>
-		<div class="row-2">
-			<Legend id="display-n" class="col-xs-1"></Legend>
-			<Legend id="display-k" class="col-xs-1"></Legend>
-			<Legend id="display-d" class="col-xs-1"></Legend>
-			<Legend id="display-e" class="col-xs-1"></Legend>
-			<Legend id="display-c" class="col-xs-1"></Legend>
-			<Legend id="display-w" class="col-xs-1"></Legend>
-			<Legend id="display-r" class="col-xs-1"></Legend>
-			<Legend id="display-g" class="col-xs-1"></Legend>
-			<Legend id="display-stop" class="col-xs-1"></Legend>
+		<Legend class="text-center">Amino Acids Count:</Legend>
+		<div class="row">
+			<Legend id="display-f"></Legend>
+			<Legend id="display-l"></Legend>
+			<Legend id="display-i"></Legend>
+			<Legend id="display-m"></Legend>
+			<Legend id="display-v"></Legend>
+			<Legend id="display-s"></Legend>
+			<Legend id="display-p"></Legend>
+			<Legend id="display-t"></Legend>
+			<Legend id="display-a"></Legend>
+			<Legend id="display-y"></Legend>
+			<Legend id="display-h"></Legend>
+			<Legend id="display-q"></Legend>
+			<Legend id="display-n"></Legend>
+			<Legend id="display-k"></Legend>
+			<Legend id="display-d"></Legend>
+			<Legend id="display-e"></Legend>
+			<Legend id="display-c"></Legend>
+			<Legend id="display-w"></Legend>
+			<Legend id="display-r"></Legend>
+			<Legend id="display-g"></Legend>
+			<Legend id="display-stop"></Legend>
 		</div>
 	</div>
+
+</div>
+
 
 </body>
 </html>
