@@ -13,7 +13,6 @@
             var input = document.getElementById("input").value;
             var length = input.length;
             var nucCount = [0, 0, 0, 0];
-
             for(i = 0; i < length; i++){
                 if (input[i] == 'A'){ //tracks number of A bases
                     nucCount[0]++;
@@ -32,7 +31,6 @@
             var displayC = document.getElementById("display-c");
             var displayG = document.getElementById("display-g");
             var displayT = document.getElementById("display-t");
-
             displayA.innerHTML = "A: " + String(nucCount[0]);
             displayC.innerHTML = "C: " + String(nucCount[1]);
             displayG.innerHTML = "G: " + String(nucCount[2]);
@@ -46,27 +44,28 @@
     <ul>
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="basecount.html">Base Counter</a></li>
-        <li><a href="convert.html">DNA -> RNA</a></li>
+        <li><a href="convert.html">DNA to RNA</a></li>
         <li><a href="complement.html">Complementing DNA</a></li>
+        <li><a href="RNAtoAmino.html">RNA to Amino Acids</a></li>
     </ul>
     <div class="titles">
         <p id="main-title" class="text-center">DNA Base Counter</p>
-        <p id="sub-title" class="text-center">Returns the number of specific nucleotides (ACGT) in a DNA string.</p>
+        <p id="sub-title" class="text-center">Returns the number of specific nucleotides (ACGT) in a DNA sequence.</p>
     </div>
 
 
     <div id="row-1" style="text-align:center">
         <form class="form-horizontal">
             <div class="form-group">
-                <label class="control-label">DNA String: </label><input type="text" id="input" placeholder="Input string here"/>
-                <input type="button" class="btn btn-primary" value="Submit!" onclick="countNuc()"/>
+                <label class="control-label">DNA Sequence: </label><input type="text" id="input" placeholder="Input string here"/>
+                <input type="button" id="submit-button" class="btn btn-primary" value="Submit!" onclick="countNuc()"/>
             </div>
         </form>
     </div>
 
     <br>
     <div class="jumbotron text-center" style="word-wrap:break-word;">
-        <Legend class="text-center">DNA Nucleotide Count:</Legend>
+        <Legend class="text-center"><u>DNA Nucleotide Count</u></Legend>
         <div class="row">
             <Legend class="text-center col inner-left" id="display-a"></Legend>
             <Legend class="text-center col inner-right" id="display-c"></Legend>

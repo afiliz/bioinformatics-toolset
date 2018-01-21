@@ -2,6 +2,10 @@ p {
     color: #363731;
 }
 
+input {
+    margin-right: 40px;
+}
+
 .titles{
     padding-top: 5%;
 }
