@@ -11,8 +11,12 @@ form {
     padding-top: 5%;
 }
 
+#nuc-title {
+    top: 500px;
+}
+
 #row-1 {
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 #main-title {
@@ -26,8 +30,21 @@ form {
     margin-bottom: 20px;
 }
 
-#base {
-    font-size: 
+#display-a {
+    top: 120%;
+    left: 20%;
+}
+
+#display-g {
+    left: 20%;
+}
+
+#display-c {
+    right: 20%;
+}
+
+#display-t {
+    right: 20%;
 }
 
 ul {

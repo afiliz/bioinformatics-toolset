@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <!--TODO: for fanciness, Add fancy fonts, change background color to purple and fonts to white, add graphics if possible-->
 <link rel="stylesheet" type="text/css" href="resources/css/basecount.css">
 <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css"/>
@@ -8,15 +9,6 @@
     <title>Base Counter</title>
 
     <script>
-        
-
-        /*function convert(){
-            var userInput = document.getElementById("input").value;
-            var result = userInput.replace(/T/g, "U");
-            var display = document.getElementById("display");
-            display.innerHTML = result;
-        }*/
-
         function countNuc(){
             var input = document.getElementById("input").value;
             var length = input.length;
@@ -42,64 +34,11 @@
             var displayG = document.getElementById("display-g");
             var displayT = document.getElementById("display-t");
 
-            display.innerHTML = input;
-            displayA.innerHTML = String(nucCount[0]);
-            displayC.innerHTML = String(nucCount[1]);
-            displayG.innerHTML = String(nucCount[2]);
-            displayT.innerHTML = String(nucCount[3]);
+            displayA.innerHTML = "A: " + String(nucCount[0]);
+            displayC.innerHTML = "C: " + String(nucCount[1]);
+            displayG.innerHTML = "G: " + String(nucCount[2]);
+            displayT.innerHTML = "T: " + String(nucCount[3]);
         }
-        /*
-        function countA(input){
-            var length = str.length;
-            a = 0;
-
-            for(i = 0; i < length; i++){
-                if (str[0] == 'A'){ //tracks number of A bases
-                    a++;
-                }
-            }
-            var display = document.getElementById("display-a");
-            display.innerHTML = a;
-        }
-
-        function countC(input){
-            var length = str.length;
-            c = 0;
-
-            for(i = 0; i < length; i++){
-                if (str[0] == 'C'){ //tracks number of C bases
-                    c++;
-                }
-            }
-            var display = document.getElementById("display-c");
-            display.innerHTML = c;
-        }
-
-        function countG(input){
-            var length = str.length;
-            g = 0;
-
-            for(i = 0; i < length; i++){
-                if (str[0] == 'G'){ //tracks number of G bases
-                    g++;
-                }
-            }
-            var display = document.getElementById("display-g");
-            display.innerHTML = g;
-        }
-
-        function countT(input){
-            var length = str.length;
-            t = 0;
-
-            for(i = 0; i < length; i++){
-                if (str[0] == 'T'){ //tracks number of T bases
-                    t++;
-                }
-            }
-            var display = document.getElementById("display-t");
-            display.innerHTML = t;
-        }*/
     </script>
 </head>
     
@@ -112,7 +51,7 @@
     </ul>
     <div class="titles">
         <p id="main-title" class="text-center">DNA Base Counter</p>
-        <p id="sub-title" class="text-center">Counts the number of specific nucleotides (ACGT) in a DNA string.</p>
+        <p id="sub-title" class="text-center">Returns the number of specific nucleotides (ACGT) in a DNA string.</p>
     </div>
 
 
@@ -123,17 +62,19 @@
         </form>
     </div>
 
-    <br><br>
-
-    <Legend class="text-center">DNA Nucleotide Count:</Legend>
-    <div class="row">
-        <p class="text-center">test: </p><Legend class="text-center" id="display"></Legend>
-        <Legend class="text-center" id="display-a"></Legend>
-        <Legend class="text-center" id="display-c"></Legend>
-        <Legend class="text-center" id="display-g"></Legend>
-        <Legend class="text-center" id="display-t"></Legend>
+    <br>
+    <div class="jumbotron text-center" style="word-wrap:break-word;">
+        <Legend class="text-center">DNA Nucleotide Count:</Legend>
+        <div class="row">
+            <Legend class="text-center col inner-left" id="display-a"></Legend>
+            <Legend class="text-center col inner-right" id="display-c"></Legend>
+        </div>
+        <br>
+        <div class="row"> 
+            <Legend class="text-center col inner-left" id="display-g"></Legend>
+            <Legend class="text-center col inner-right" id="display-t"></Legend>
+        </div>
     </div>
-    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
