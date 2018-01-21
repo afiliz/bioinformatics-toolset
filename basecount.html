@@ -13,30 +13,53 @@
             var input = document.getElementById("input").value;
             var length = input.length;
             var nucCount = [0, 0, 0, 0];
+            var valid = true;
+            var count = 0;
 
 
             for(i = 0; i < length; i++){
                 if (input[i] == 'A'){ //tracks number of A bases
                     nucCount[0]++;
                 }
-                if (input[i] == 'C'){ //tracks number of C bases
+                else if (input[i] == 'C'){ //tracks number of C bases
                     nucCount[1]++;
                 }
-                if (input[i] == 'G'){ //tracks number of G bases
+                else if (input[i] == 'G'){ //tracks number of G bases
                     nucCount[2]++;
                 }
-                if (input[i] == 'T'){ //tracks number of T bases
+                else if (input[i] == 'T'){ //tracks number of T bases
                     nucCount[3]++;
                 }
+                else{
+                    valid = false;
+                    break;
+                }
             }
-            var displayA = document.getElementById("display-a");
-            var displayC = document.getElementById("display-c");
-            var displayG = document.getElementById("display-g");
-            var displayT = document.getElementById("display-t");
-            displayA.innerHTML = "A: " + String(nucCount[0]);
-            displayC.innerHTML = "C: " + String(nucCount[1]);
-            displayG.innerHTML = "G: " + String(nucCount[2]);
-            displayT.innerHTML = "T: " + String(nucCount[3]);
+
+            if (valid == false){
+                var validDisplay = document.getElementById("valid");
+                validDisplay.innerHTML = "Please input a valid DNA sequence.";
+                var displayA = document.getElementById("display-a");
+                var displayC = document.getElementById("display-c");
+                var displayG = document.getElementById("display-g");
+                var displayT = document.getElementById("display-t");
+                displayA.innerHTML = "";
+                displayC.innerHTML = "";
+                displayG.innerHTML = "";
+                displayT.innerHTML = "";
+            }
+            else if (valid == true){
+                var validDisplay = document.getElementById("valid");
+                validDisplay.innerHTML = "";
+                var displayA = document.getElementById("display-a");
+                var displayC = document.getElementById("display-c");
+                var displayG = document.getElementById("display-g");
+                var displayT = document.getElementById("display-t");
+                displayA.innerHTML = "A: " + String(nucCount[0]);
+                displayC.innerHTML = "C: " + String(nucCount[1]);
+                displayG.innerHTML = "G: " + String(nucCount[2]);
+                displayT.innerHTML = "T: " + String(nucCount[3]);
+            }
         }
     </script>
 
@@ -67,6 +90,7 @@
     <br>
     <div class="jumbotron text-center" style="word-wrap:break-word;">
         <Legend class="text-center"><u>DNA Nucleotide Count</u></Legend>
+        <Legend id="valid"></Legend>
         <div class="row">
             <Legend class="text-center col inner-left" id="display-a"></Legend>
             <Legend class="text-center col inner-right" id="display-c"></Legend>
