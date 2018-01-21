@@ -15,7 +15,7 @@
             // dispaly results
             var display = document.getElementById("display");
             display.innerHTML = result;
-        }
+        } 
     </script>
 </head>
 
@@ -35,16 +35,16 @@
             <form class="form-inline text-center">
                 <div class="form-group">
                     <label class="control-label">DNA Sequence: </label><input class="form-control" type="text" id="input" placeholder="Input sequence here"/>
-                    <input type="button" id="submit-button" class="btn btn-primary btn-sm" value="Submit!" onclick="convert()"/>
+                    <input type="button" id="submit-button" class="btn btn-primary btn-sm" value="Submit!" onclick="convert();showAnswer();"/>
                 </div>
             </form>
     </div>
     <br><br>
     <div class="jumbotron text-center" style="word-wrap:break-word;">
-            <Legend><u>RNA Sequence Result</u></Legend>
+            <Legend id="answer-title"><u>RNA Sequence Result</u></Legend>
             <p id="display"></p>
     </div>
-    <footer>
+    <!--<footer>
             <div class="container-fluid">
                 <div class="row" id="footer-row">
                     <div id="footer-content" class="col-md-6">
@@ -65,5 +65,5 @@
                     Created by Adam Filiz and Vincent Wu at CruzHacks 2018.
                 </div>
             </div>
-    </footer>
+    </footer>-->
 </body>
