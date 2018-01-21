@@ -26,25 +26,25 @@
     <ul>
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="basecount.html">Base Counter</a></li>
-        <li><a href="convert.html">DNA -> RNA</a></li>
+        <li><a href="convert.html">DNA to RNA</a></li>
         <li><a href="complement.html">Complementing DNA</a></li>
-        <li><a href="RNAtoAmino.html">RNA -> Amino Acids</a></li>
+        <li><a href="RNAtoAmino.html">RNA to Amino Acids</a></li>
     </ul>
     <div class="titles">
-        <p id="main-title" class="text-center boy">Complement a DNA Strand</p>
-        <p id="sub-title" class="text-center">Finds the <a target="_blank" href="http://bioweb.uwlax.edu/GenWeb/Molecular/Seq_Anal/Reverse_Comp/reverse_comp.html">reverse complement</a>.</p>
+        <p id="main-title" class="text-center boy">Complement a DNA Sequence</p>
+        <p id="sub-title" class="text-center">Finds the <a target="_blank" href="http://bioweb.uwlax.edu/GenWeb/Molecular/Seq_Anal/Reverse_Comp/reverse_comp.html">reverse complement</a> of a DNA sequence.</p>
     </div>
 
     <div id="row-1" style="text-align:center">
         <form>
-            DNA String: <input type="text" id="input" placeholder="Input string here" />
-            <input type="button" value="Submit!" onclick="convert()"/>
+            DNA Sequence: <input type="text" id="input" placeholder="Input string here" />
+            <input type="button" id="submit-button" class="btn btn-primary" value="Submit!" onclick="convert()"/>
             <br>
         </form>
         <br><br>
     </div>
     <div class="jumbotron text-center" style="word-wrap:break-word;">
-        <Legend>RNA String:</Legend>
+        <Legend><u>RNA Sequence</u></Legend>
         <p id="display"></p>
     </div>
 </body>
