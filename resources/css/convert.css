@@ -11,7 +11,8 @@ input {
 }
 
 #row-1 {
-    padding-top: 10%;
+    padding-top: 5%;
+    margin-bottom: -1.8%;
 }
 
 #main-title {
@@ -25,12 +26,17 @@ input {
     margin-bottom: 20px;
 }
 
+#submit-button {
+    background-color: rgb(112, 36, 112);
+    border-color: rgb(112, 36, 112);
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #e7e7e7;
+    border-bottom: 1px solid rgb(112, 36, 112);
     background-color: #f3f3f3;
 }
 
@@ -52,5 +58,19 @@ li a:hover:not(.active) {
 
 li a.active {
     color: white;
-    background-color: #4CAF50;
+    background-color: rgb(112, 36, 112);
+}
+
+.form-control {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.form-inline {
+    margin-left: 34%;
+}
+
+#display {
+    font-size: 150%;
+    color: black;
 }

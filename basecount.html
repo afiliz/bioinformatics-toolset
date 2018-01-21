@@ -42,22 +42,21 @@
     
 <body>
     <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="basecount.html">Base Counter</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="basecount.html">Base Counter</a></li>
         <li><a href="convert.html">DNA to RNA</a></li>
         <li><a href="complement.html">Complementing DNA</a></li>
         <li><a href="RNAtoAmino.html">RNA to Amino Acids</a></li>
     </ul>
     <div class="titles">
         <p id="main-title" class="text-center">DNA Base Counter</p>
-        <p id="sub-title" class="text-center">Returns the number of specific nucleotides (ACGT) in a DNA sequence.</p>
+        <p id="sub-title" class="text-center">Returns the amount of each nucleotide in a DNA sequence.</p>
     </div>
 
-
-    <div id="row-1" style="text-align:center">
-        <form class="form-horizontal">
+    <div id="row-1">
+        <form class="form-inline text-center">
             <div class="form-group">
-                <label class="control-label">DNA Sequence: </label><input type="text" id="input" placeholder="Input string here"/>
+                <label class="control-label">DNA Sequence: </label><input class="form-control" type="text" id="input" placeholder="Input sequence here"/>
                 <input type="button" id="submit-button" class="btn btn-primary btn-sm" value="Submit!" onclick="countNuc()"/>
             </div>
         </form>
