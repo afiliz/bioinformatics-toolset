@@ -28,7 +28,6 @@
                     nucCount[3]++;
                 }
             }
-            var display = document.getElementById("display");
             var displayA = document.getElementById("display-a");
             var displayC = document.getElementById("display-c");
             var displayG = document.getElementById("display-g");
@@ -40,6 +39,7 @@
             displayT.innerHTML = "T: " + String(nucCount[3]);
         }
     </script>
+
 </head>
     
 <body>
@@ -56,9 +56,11 @@
 
 
     <div id="row-1" style="text-align:center">
-        <form>
-            DNA String: <input type="text" id="input" placeholder="Input string here"/>
-            <input type="button" value="Submit!" onclick="countNuc()"/>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label">DNA String: </label><input type="text" id="input" placeholder="Input string here"/>
+                <input type="button" class="btn btn-primary" value="Submit!" onclick="countNuc()"/>
+            </div>
         </form>
     </div>
 

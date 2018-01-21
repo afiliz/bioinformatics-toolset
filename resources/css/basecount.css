@@ -47,6 +47,10 @@ form {
     right: 20%;
 }
 
+#form-submit {
+    background: white;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
